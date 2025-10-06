@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff;
+}
+        #st {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 300px;
+          padding: 20px;
+          background-color: #f0f0f0;
+          font-family: Arial, sans-serif;
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 1.5px 3px 0 rgba(60,60,60,0.15);
+          border-radius: 16px;
+          color: black;
+}
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        span {
+            font-weight: bold;
+            color: #000;
+        }
+        h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #000000;
+}
+a {
+    text-decoration: none;
+    color: #00BFFF;
+}
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 3px solid #ccc;
+    margin: 20px 0;
+}
+    </style>
+</head>
+<body>
+
+    <div id="st">  
+        <h2>Task</h2>
+                           <p>Name: <span id="name"></span></p>
+                    <p>Email: <span id="email"></span></p>
+                    <p>Phone number: <span id="number"></span></p>
+                    <p>ID: <span id="id"></span></p>
+                    <hr>
+                    <h4>Developer: <i><a href="https://wa.me/201148944412">Mezo</a></i></h4>
+    </div>    
+
+    <script>
+        document.getElementById('name').innerText = localStorage.getItem('name');
+        document.getElementById('email').innerText = localStorage.getItem('email');
+        document.getElementById('number').innerText = localStorage.getItem('number');
+        document.getElementById('id').innerText = localStorage.getItem('id');
+    </script>
+</body>
+</html>
